@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        {{ form(user_form)}}
+    </div>
+    <div id="demo">
+        <button type="button" onclick="loadDoc('users.json', myFunction)"> Show Content</button>
+    </div>
+
+       
+{% endblock %}
+    
+
+
+
+{% block javascript %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/listUser.js') }}"
+
+{% endblock %}
+
